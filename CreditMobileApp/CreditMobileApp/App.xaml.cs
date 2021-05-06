@@ -1,3 +1,4 @@
+using CreditMobileApp.Droid.Pages;
 using CreditMobileApp.ViewModels;
 using CreditMobileApp.Views;
 using Prism;
@@ -19,7 +20,7 @@ namespace CreditMobileApp
         {
             InitializeComponent();
 
-            await NavigationService.NavigateAsync("NavigationPage/MainPage");
+            await NavigationService.NavigateAsync("NavigationPage/LandingPage");
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
@@ -28,6 +29,7 @@ namespace CreditMobileApp
 
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
+            containerRegistry.RegisterForNavigation<LandingPage, LandingPageViewModel>();
         }
     }
 }

@@ -9,6 +9,16 @@ namespace CreditMobileApp.Droid.Pages
             : base(navigationService)
         {
             Title = "Landing Page";
+            UserName = "Kudzai";
         }
+
+        private string _userName;
+        public string UserName
+        {
+            get =>  _userName; 
+            set => SetProperty(ref _userName, value); 
+        }
+
+
     }
 }
